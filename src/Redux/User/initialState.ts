@@ -3,7 +3,7 @@ import {THEME_BACKUP} from "../../Utils/Constants/Backup";
 
 
 export const INITIAL_USERS = {
-  theme: JSON.parse(localStorage.getItem(THEME_BACKUP)) || DEFAULT_THEME_SETTINGS,
+  theme: JSON.parse(<string>localStorage.getItem(THEME_BACKUP)) || DEFAULT_THEME_SETTINGS,
   confirmAction: {
     action: async () => {
     },
