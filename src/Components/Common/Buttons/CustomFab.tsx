@@ -4,8 +4,8 @@ import {useCustomTheme} from "../../../Providers/Theme/CustomThemeProvider";
 import {CommonStyles} from "../../../Styles/Blocks";
 
 type CustomFabProps = {
-  icon: React.ReactNode,
-  onClick: () => void
+  icon: React.ReactNode;
+  onClick: () => void;
 }
 
 export const CustomFab: FC<CustomFabProps> = ({icon, onClick}) => {

@@ -3,11 +3,11 @@ import {MainLayout} from "../../Components/Layouts/MainLayout";
 import {useCourses} from "../../Providers/CoursesProvider";
 import CourseCard from "../../Components/Items/Courses/CourseCard";
 import {Grid} from "@mui/material";
-import {CustomFab} from "../../Components/Common/Buttons/CustomFab";
 import {Add} from "@mui/icons-material";
 import CreateCourseModal from "../../Components/Modals/Courses/CreateCourseModal";
 import {connect} from "react-redux";
 import {setCreateCourseModal} from "../../Redux/Courses/coursesActions";
+import {CustomFab} from "../../Components/Common/Buttons/CustomFab";
 
 type CoursesListProps = {
   setCreateCourseModal: (state: boolean) => void;

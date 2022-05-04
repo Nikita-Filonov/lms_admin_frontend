@@ -1,5 +1,4 @@
 import React, {FC} from "react";
-import {ModalWrapper} from "../../Common/Modals/ModalWrapper";
 import {Button, DialogActions, DialogContent, DialogTitle} from "@mui/material";
 import {connect} from 'react-redux';
 import {setCourse, setCreateCourseModal} from "../../../Redux/Courses/coursesActions";
@@ -8,6 +7,7 @@ import {useCourses} from "../../../Providers/CoursesProvider";
 import {INITIAL_COURSES} from "../../../Redux/Courses/initialState";
 import {ReduxState} from "../../../Models/ReduxState";
 import {Course} from "../../../Models/Courses";
+import {ModalWrapper} from "../../Common/Modals/ModalWrapper";
 
 type CreateCourseModalProps = {
   createCourseModal: boolean;
