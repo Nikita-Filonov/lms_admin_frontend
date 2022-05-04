@@ -1,7 +1,8 @@
 import {Theme} from "./Theme";
 
 interface UsersReduxState {
-  theme: Theme
+  theme: Theme;
+  backdrop: boolean;
 }
 
 

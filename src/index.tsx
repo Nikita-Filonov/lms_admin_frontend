@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux";
 import reducer from './Redux/Reducers';
 import {CoursesProvider} from "./Providers/CoursesProvider";
+import SuspenseBackdrop from "./Components/Common/SuspenseBackdrop";
+import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
 
 export const store = createStore(reducer);
 
@@ -15,9 +17,9 @@ const CustomRoute = () => {
     <React.Fragment>
       <SuspenseBackdrop/>
       <NavigationDrawer>
-        <Switch>
-          <CoursesRoutes/>
-        </Switch>
+        {/*<Switch>*/}
+        {/*  <CoursesRoutes/>*/}
+        {/*</Switch>*/}
       </NavigationDrawer>
     </React.Fragment>
   )
@@ -28,7 +30,7 @@ ReactDOM.render(
     <Provider store={store}>
       <Router>
         <CoursesProvider>
-          asdasdsa
+          <CustomRoute/>
         </CoursesProvider>
       </Router>
     </Provider>

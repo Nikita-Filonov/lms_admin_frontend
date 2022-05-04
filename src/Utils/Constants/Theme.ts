@@ -10,7 +10,8 @@ export const DEFAULT_THEME_SETTINGS = {
   }
 };
 
-export const TRANSITIONS = {
+
+export const TRANSITIONS: any = {
   'slide': Slide,
   'grow': Grow,
   'fade': Fade,

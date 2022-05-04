@@ -9,3 +9,9 @@ export interface Theme {
   themeMode: string;
   snackbar: SnackbarTheme;
 }
+
+
+export interface Alert {
+  message: string;
+  level: 'success' | 'primary' | 'error' | 'warning'
+}

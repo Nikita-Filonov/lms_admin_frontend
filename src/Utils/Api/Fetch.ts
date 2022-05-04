@@ -9,7 +9,7 @@ interface ClientConfig {
 const client = async (
   endpoint: string,
   method: string,
-  body: {},
+  body: {} | null,
   withAuth: boolean = false,
   customConfig: ClientConfig,
 ) => {

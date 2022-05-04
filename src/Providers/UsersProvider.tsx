@@ -1,6 +1,6 @@
 import React, {FC, useContext, useEffect, useState} from 'react';
 import {useHistory} from "react-router-dom";
-import {get, patch, post} from "../Utils/Api/Fetch";
+import {get, patch} from "../Utils/Api/Fetch";
 import {SUPPORTED_ACTIONS, useAlerts} from "./Theme/AlertsProvider";
 import {useTranslation} from "react-i18next";
 import {TOKEN_BACKUP} from "../Utils/Constants/Backup";
@@ -39,7 +39,7 @@ const UsersProvider: FC<UsersProviderProps> = ({children}) => {
     return {error, json};
   };
 
-  const updateUser = async (payload) => {
+  const updateUser = async (payload: Object) => {
     setRequest(true)
     const {error, json} = await patch(userApi, payload, true);
     !error && setUser(json);
@@ -48,7 +48,7 @@ const UsersProvider: FC<UsersProviderProps> = ({children}) => {
     return {error, json};
   }
 
-  const login = async (token) => {
+  const login = async (token: string) => {
     localStorage.setItem(TOKEN_BACKUP, token);
     setToken(token);
     history.push('/characters');
@@ -60,20 +60,21 @@ const UsersProvider: FC<UsersProviderProps> = ({children}) => {
     history.push('/login');
   };
 
-  const changePassword = async (payload) => {
-    setRequest(true);
-    const {error, json} = await post('/api/v1/change-password/', payload, true);
-    if (!error) {
-      setAlert(json)
-      setErrors({})
-    } else {
-      setErrors(json)
-    }
-    setRequest(false);
-  };
+  // const changePassword = async (payload) => {
+  //   setRequest(true);
+  //   const {error, json} = await post('/api/v1/change-password/', payload, true);
+  //   if (!error) {
+  //     setAlert(json)
+  //     setErrors({})
+  //   } else {
+  //     setErrors(json)
+  //   }
+  //   setRequest(false);
+  // };
 
   return (
-    <UsersContext.Provider value={{request, user, token, errors, login, logout, updateUser, changePassword}}>
+    // value={{request, user, token, errors, login, logout, updateUser, changePassword}}
+    <UsersContext.Provider value={null}>
       {children}
     </UsersContext.Provider>
   );
