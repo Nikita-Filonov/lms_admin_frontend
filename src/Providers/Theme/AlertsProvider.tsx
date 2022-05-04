@@ -1,6 +1,6 @@
-import React, {FC, useContext} from 'react';
+import React, {FC, useContext, useRef} from 'react';
 import {IconButton} from "@mui/material";
-import {SnackbarKey, SnackbarProvider, useSnackbar} from "notistack";
+import {SnackbarKey, SnackbarProvider} from "notistack";
 import {Close} from "@mui/icons-material";
 import {useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
@@ -33,20 +33,20 @@ export const SUPPORTED_ACTIONS = {
 const AlertsProvider: FC<DefaultProviderProps> = ({children}) => {
   const {t} = useTranslation();
   const {isDesktop} = useCustomTheme();
-  const {enqueueSnackbar, closeSnackbar} = useSnackbar();
+  const alertRef = useRef<any>(null);
   const theme = useSelector((state: ReduxState) => state.users.theme);
 
   const setAlert = (payload: Alert) => {
     const message = payload?.message;
     const level = payload?.level;
     if (payload?.message && payload?.level) {
-      enqueueSnackbar(message, {variant: level})
+      alertRef.current.enqueueSnackbar(message, {variant: level})
     } else {
-      enqueueSnackbar(t('components.alerts.custom.unknownError'), {variant: 'error'})
+      alertRef.current.enqueueSnackbar(t('components.alerts.custom.unknownError'), {variant: 'error'})
     }
   };
 
-  const onClose = (key: SnackbarKey) => closeSnackbar(key);
+  const onClose = (key: SnackbarKey) => alertRef.current.closeSnackbar(key);
 
   const successTemplate = (instance: string, type: string) => ({
     message: t('components.alerts.success', {
@@ -60,6 +60,7 @@ const AlertsProvider: FC<DefaultProviderProps> = ({children}) => {
   return (
     <AlertsContext.Provider value={{setAlert, successTemplate}}>
       <SnackbarProvider
+        ref={alertRef}
         dense={!isDesktop}
         maxSnack={theme?.snackbar?.maxStack || DEFAULT_THEME_SETTINGS.snackbar.maxStack}
         autoHideDuration={4000}

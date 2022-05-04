@@ -10,6 +10,8 @@ import SuspenseBackdrop from "./Components/Common/SuspenseBackdrop";
 import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
 import {AlertsProvider} from "./Providers/Theme/AlertsProvider";
 import {CustomThemeProvider} from "./Providers/Theme/CustomThemeProvider";
+import {ThemeWrapper} from "./Providers/Theme/ThemeProvider";
+import {UsersProvider} from "./Providers/UsersProvider";
 
 export const store = createStore(reducer);
 
@@ -30,13 +32,17 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <CustomThemeProvider>
-          <AlertsProvider>
-            <CoursesProvider>
-              <CustomRoute/>
-            </CoursesProvider>
-          </AlertsProvider>
-        </CustomThemeProvider>
+        <ThemeWrapper>
+          <CustomThemeProvider>
+            <AlertsProvider>
+              <UsersProvider>
+                <CoursesProvider>
+                  <CustomRoute/>
+                </CoursesProvider>
+              </UsersProvider>
+            </AlertsProvider>
+          </CustomThemeProvider>
+        </ThemeWrapper>
       </Router>
     </Provider>
   </React.StrictMode>,

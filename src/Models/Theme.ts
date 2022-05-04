@@ -1,4 +1,5 @@
 import {VariantType} from "notistack";
+import {PaletteMode} from "@mui/material";
 
 export interface SnackbarTheme {
   vertical: 'top' | 'bottom';
@@ -8,7 +9,7 @@ export interface SnackbarTheme {
 }
 
 export interface Theme {
-  themeMode: string;
+  themeMode?: PaletteMode;
   snackbar: SnackbarTheme;
 }
 
