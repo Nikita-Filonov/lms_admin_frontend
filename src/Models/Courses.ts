@@ -1,5 +1,5 @@
 export interface Course {
-  id: number;
+  id: number | null;
   title: string;
   image: string;
   description: string;
@@ -11,4 +11,8 @@ export interface CreateCourse extends Omit<Course, 'editorContent' | 'content' |
 }
 
 export interface UpdateCourse extends Omit<Course, 'id'> {
+}
+
+export interface ReduxCourse extends Course {
+  editMode: boolean;
 }
