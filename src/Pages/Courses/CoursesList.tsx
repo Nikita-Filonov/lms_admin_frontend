@@ -16,7 +16,7 @@ type CoursesListProps = {
 const CoursesList: FC<CoursesListProps> = ({setCreateCourseModal}) => {
   const {courses, getCourses} = useCourses();
 
-  useEffect(() => getCourses(), [getCourses]);
+  useEffect(() => getCourses(), []);
 
   const onCreateCourse = () => setCreateCourseModal(true);
 

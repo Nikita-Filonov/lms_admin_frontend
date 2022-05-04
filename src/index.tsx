@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from "react-redux";
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter as Router, Switch} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux";
 import reducer from './Redux/Reducers';
@@ -12,6 +12,7 @@ import {AlertsProvider} from "./Providers/Theme/AlertsProvider";
 import {CustomThemeProvider} from "./Providers/Theme/CustomThemeProvider";
 import {ThemeWrapper} from "./Providers/Theme/ThemeProvider";
 import {UsersProvider} from "./Providers/UsersProvider";
+import {CoursesRoutes} from "./Components/Navigation/Routers/Courses/CoursesRoutes";
 
 export const store = createStore(reducer);
 
@@ -20,9 +21,9 @@ const CustomRoute = () => {
     <React.Fragment>
       <SuspenseBackdrop/>
       <NavigationDrawer>
-        {/*<Switch>*/}
-        {/*  <CoursesRoutes/>*/}
-        {/*</Switch>*/}
+        <Switch>
+          <CoursesRoutes/>
+        </Switch>
       </NavigationDrawer>
     </React.Fragment>
   )
