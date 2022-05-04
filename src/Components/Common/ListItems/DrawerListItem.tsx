@@ -1,9 +1,15 @@
-import React from "react";
+import React, {FC} from "react";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
-export const DrawerListItem = ({open, icon, title}) => {
+type DrawerListItemProps = {
+  open: boolean,
+  icon: React.ReactNode,
+  title: string
+}
+
+export const DrawerListItem: FC<DrawerListItemProps> = ({open, icon, title}) => {
   return (
     <ListItemButton
       sx={{
