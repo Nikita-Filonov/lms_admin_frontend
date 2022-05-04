@@ -14,7 +14,7 @@ export const NavigationBreadcrumbs = () => {
   const breadcrumbs = useBreadcrumbs(breadcrumbRoutes);
   const history = useHistory();
 
-  const onLink = (url) => history.push(url);
+  const onLink = (url: string) => history.push(url);
 
   return (
     <Breadcrumbs
@@ -27,7 +27,7 @@ export const NavigationBreadcrumbs = () => {
           <Link
             style={{color: '#FFFFFF', fontSize: isDesktop ? 16 : 12}}
             key={index}
-            to={getOverrideUrl(match)}
+            href={getOverrideUrl(match)}
             onClick={() => onLink(getOverrideUrl(match))}
           >
             {breadcrumb}

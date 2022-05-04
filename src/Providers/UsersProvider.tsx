@@ -4,8 +4,9 @@ import {get, patch} from "../Utils/Api/Fetch";
 import {SUPPORTED_ACTIONS, useAlerts} from "./Theme/AlertsProvider";
 import {useTranslation} from "react-i18next";
 import {TOKEN_BACKUP} from "../Utils/Constants/Backup";
+import {UsersProviderType} from "../Models/Providers/UsersProvider";
 
-const UsersContext = React.createContext(null);
+const UsersContext = React.createContext<UsersProviderType | null>(null);
 
 type UsersProviderProps = {
   children: React.ReactNode
@@ -74,7 +75,7 @@ const UsersProvider: FC<UsersProviderProps> = ({children}) => {
 
   return (
     // value={{request, user, token, errors, login, logout, updateUser, changePassword}}
-    <UsersContext.Provider value={null}>
+    <UsersContext.Provider value={{token}}>
       {children}
     </UsersContext.Provider>
   );

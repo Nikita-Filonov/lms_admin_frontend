@@ -1,10 +1,12 @@
-import React, {useContext} from 'react';
-import {useMediaQuery} from "@mui/material";
+import React, {FC, useContext} from 'react';
+import {Theme, useMediaQuery} from "@mui/material";
+import {DefaultProviderProps} from "../../Models/Providers/DefaultProviderProps";
+import {CustomThemeProviderType} from "../../Models/Providers/CustomThemeProvider";
 
-const CustomThemeContext = React.createContext(null);
+const CustomThemeContext = React.createContext<CustomThemeProviderType | null>(null);
 
-const CustomThemeProvider = ({children}) => {
-  const isDesktop = useMediaQuery(theme => theme.breakpoints.up('sm'));
+const CustomThemeProvider: FC<DefaultProviderProps> = ({children}) => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
 
   return (
     <CustomThemeContext.Provider value={{isDesktop,}}>
