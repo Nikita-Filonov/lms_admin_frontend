@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {Provider} from "react-redux";
-import {BrowserRouter as Router, Switch} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux";
 import reducer from './Redux/Reducers';
 import {CoursesProvider} from "./Providers/CoursesProvider";
 import SuspenseBackdrop from "./Components/Common/SuspenseBackdrop";
 import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
+import {AlertsProvider} from "./Providers/Theme/AlertsProvider";
 
 export const store = createStore(reducer);
 
@@ -29,9 +30,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <CoursesProvider>
-          <CustomRoute/>
-        </CoursesProvider>
+        <AlertsProvider>
+          <CoursesProvider>
+            <CustomRoute/>
+          </CoursesProvider>
+        </AlertsProvider>
       </Router>
     </Provider>
   </React.StrictMode>,

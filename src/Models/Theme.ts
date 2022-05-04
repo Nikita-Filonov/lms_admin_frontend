@@ -1,6 +1,8 @@
+import {VariantType} from "notistack";
+
 export interface SnackbarTheme {
-  vertical: string;
-  horizontal: string;
+  vertical: 'top' | 'bottom';
+  horizontal: 'left' | 'center' | 'right';
   transition: string;
   maxStack: number;
 }
@@ -13,5 +15,5 @@ export interface Theme {
 
 export interface Alert {
   message: string;
-  level: 'success' | 'primary' | 'error' | 'warning'
+  level: VariantType
 }
