@@ -1,0 +1,2 @@
+export const SET_COURSE = 'SET_COURSE';
+export const SET_CREATE_COURSE_MODAL = 'SET_CREATE_COURSE_MODAL';
