@@ -1,0 +1,5 @@
+.paragraph {
+  --list-vertical-margin: var(--editor-list-vertical-margin, var(--block-vertical-margin));
+
+  margin: var(--list-vertical-margin) 0;
+}

@@ -1,0 +1,16 @@
+.paragraph {
+  --paragraph-vertical-margin: var(--editor-paragraph-vertical-margin, var(--block-vertical-margin));
+
+  margin: var(--paragraph-vertical-margin) 0;
+
+  h2 + & {
+    margin-top: calc(var(--block-vertical-margin) / 1.2);
+  }
+
+  :global {
+    .katex-display {
+      display: inline-block;
+    }
+  }
+}
+

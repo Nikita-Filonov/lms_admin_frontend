@@ -8,6 +8,7 @@ import {Course} from "../../Models/Courses";
 import {ReduxState} from "../../Models/ReduxState";
 import {CreateCourseToolbar} from "../../Components/Blocks/Courses/CreateCourseToolbar";
 import {HorizontalDivider} from "../../Components/Common/HorizontalDivider";
+import {EditorRenderer} from "../../Components/Common/Editor/EdtitorRenderer/EdtitorRenderer";
 
 type CreateCourseProps = {
   course: Course
@@ -29,8 +30,8 @@ const CreateCourse: FC<CreateCourseProps> = ({course}) => {
     <MainLayout>
       <CreateCourseToolbar/>
       <HorizontalDivider/>
-      {course?.id && <CourseEditor course={course}/>}
-      {/*{course?.id && <EditorRenderer data={JSON.parse(course.editorContent)}/>}*/}
+      {/*{course?.id && <CourseEditor course={course}/>}*/}
+      {course?.id && <EditorRenderer data={JSON.parse(course.editorContent as string)}/>}
     </MainLayout>
   )
 };

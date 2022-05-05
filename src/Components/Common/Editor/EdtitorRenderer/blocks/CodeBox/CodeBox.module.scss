@@ -1,0 +1,13 @@
+.codeBox {
+  --code-vertical-margin: var(--editor-code-vertical-margin, var(--mediablock-vertical-margin));
+
+  overflow-x: auto;
+  width: 100%;
+  margin: var(--code-vertical-margin) 0;
+  padding: var(--size-xxs);
+  // border-radius: 8px;
+  background: #22272e;
+  color: #abb2bf;
+  font: 14px monospace;
+  white-space: pre;
+}

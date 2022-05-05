@@ -1,0 +1,26 @@
+.renderer {
+  --block-vertical-margin: var(--editor-block-vertical-margin, 1.54em);
+  --mediablock-vertical-margin: var(--editor-mediablock-vertical-margin, 52px);
+  --block-font-size: var(--editor-block-font-size, 18px);
+  --block-line-height: var(--editor-block-line-height, 1.556);
+
+  position: relative;
+  font-size: var(--block-font-size);
+  line-height: var(--block-line-height);
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}

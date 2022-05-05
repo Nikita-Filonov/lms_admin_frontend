@@ -1,0 +1,10 @@
+.header {
+  --header-top-margin: var(--editor-header-top-margin, 2.1em);
+  --header-bottom-margin: var(--editor-header-bottom-margin, 0.7em);
+
+  margin: var(--header-top-margin) 0 var(--header-bottom-margin);
+
+  & + & {
+    margin-top: var(--header-bottom-margin);
+  }
+}

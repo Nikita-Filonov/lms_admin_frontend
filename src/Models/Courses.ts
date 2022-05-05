@@ -4,7 +4,7 @@ export interface Course {
   image: string;
   description: string;
   content?: string;
-  editorContent?: string;
+  editorContent: string | null;
 }
 
 export interface CreateCourse extends Omit<Course, 'editorContent' | 'content' | 'id'> {

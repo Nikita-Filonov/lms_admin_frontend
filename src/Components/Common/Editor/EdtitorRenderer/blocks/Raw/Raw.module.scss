@@ -1,0 +1,6 @@
+.raw {
+  --raw-vertical-margin: var(--editor-raw-vertical-margin, var(--block-vertical-margin));
+
+  position: relative;
+  margin: var(--raw-vertical-margin) 0;
+}

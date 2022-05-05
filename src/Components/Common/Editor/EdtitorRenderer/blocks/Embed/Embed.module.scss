@@ -1,0 +1,27 @@
+.embed {
+  --embed-vertical-margin: var(--editor-embed-vertical-margin, var(--mediablock-vertical-margin));
+
+  margin: var(--embed-vertical-margin) auto;
+}
+
+.iframe {
+  width: 100%;
+  height: var(--embed-height);
+  border: none;
+
+  .facebook & {
+    height: 592px;
+  }
+  
+  .miro & {
+    height: 500px;
+  }
+  }
+
+.caption {
+  margin: 16px 0 0;
+  color: var(--color-primary-50);
+  font-size: 0.77em;
+  font-style: italic;
+  text-align: center;
+}

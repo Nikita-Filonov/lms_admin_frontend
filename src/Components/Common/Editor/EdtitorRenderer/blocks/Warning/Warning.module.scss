@@ -1,0 +1,18 @@
+.warning {
+  --warning-vertical-margin: var(--editor-warning-vertical-margin, var(--block-vertical-margin));
+
+  margin: var(--warning-vertical-margin) 0;
+  padding: var(--size-l) var(--size-l) var(--size-l) 38px;
+  border-left: 1px solid var(--color-primary-30);
+  background: var(--color-primary-5);
+}
+
+.name {
+  margin: 0 0 var(--size-xs);
+  font-weight: 600;
+}
+
+.message {
+  margin: 0;
+  padding: 0;
+}

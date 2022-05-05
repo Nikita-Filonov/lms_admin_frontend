@@ -1,0 +1,8 @@
+.code {
+  --code-vertical-margin: var(--editor-code-vertical-margin, var(--block-vertical-margin));
+
+  margin: var(--code-vertical-margin) 0;
+  padding: var(--size-s);
+  border-radius: 8px;
+  background: var(--color-primary-5);
+}

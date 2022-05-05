@@ -1,0 +1,46 @@
+.image {
+  --image-vertical-margin: var(--image-embed-vertical-margin, var(--mediablock-vertical-margin));
+
+  margin: var(--image-vertical-margin) auto;
+}
+
+.cover {
+  overflow: hidden;
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+
+  .bordered & {
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .stretched & {
+    width: 100%;
+  }
+
+  .withBackground & {
+    padding: var(--size-s);
+    background: var(--color-primary-5);
+  }
+}
+
+.file {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  vertical-align: bottom;
+
+  .withBackground & {
+    width: auto;
+    // max-width: 85%;
+  }
+}
+
+.caption {
+  margin: 16px 0 0;
+  color: var(--color-primary-50);
+  font-size: 0.77em;
+  font-style: italic;
+  text-align: center;
+}
