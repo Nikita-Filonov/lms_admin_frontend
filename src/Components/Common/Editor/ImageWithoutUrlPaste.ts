@@ -1,3 +1,4 @@
+// @ts-ignore
 import Image from '@editorjs/image';
 
 export default class ImageWithoutUrlPaste extends Image {

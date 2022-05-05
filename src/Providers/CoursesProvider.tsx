@@ -11,7 +11,7 @@ const CoursesContext = React.createContext<CoursesContextType | null>(null);
 const CoursesProvider: FC<DefaultProviderProps> = ({children}) => {
   const [courses, setCourses] = useState<Course[]>([]);
 
-  const getCourse = async (courseId: number) => {
+  const getCourse = async (courseId: string | number | null) => {
     const {error, json} = await get(`/courses/${courseId}/`, true);
     !error && store.dispatch({type: SET_COURSE, payload: json});
   }
@@ -26,7 +26,7 @@ const CoursesProvider: FC<DefaultProviderProps> = ({children}) => {
     !error && setCourses([...courses, json]);
   };
 
-  const updateCourse = async (courseId: number | null, payload: UpdateCourse) => {
+  const updateCourse = async (courseId: string | number | null, payload: UpdateCourse) => {
     const {json, error} = await patch(`/courses/${courseId}/`, payload, true);
     console.log(json, error)
   }

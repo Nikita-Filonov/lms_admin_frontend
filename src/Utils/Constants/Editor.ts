@@ -1,17 +1,32 @@
+// @ts-ignore
 import Codebox from '@bomdi/codebox';
+// @ts-ignore
 import Delimiter from '@editorjs/delimiter';
+// @ts-ignore
 import Embed from '@editorjs/embed';
+// @ts-ignore
 import Header from '@editorjs/header';
+// @ts-ignore
 import InlineCode from '@editorjs/inline-code';
+// @ts-ignore
 import List from '@editorjs/list';
+// @ts-ignore
 import Marker from '@editorjs/marker';
+// @ts-ignore
 import Quote from '@editorjs/quote';
+// @ts-ignore
 import Raw from '@editorjs/raw';
+// @ts-ignore
 import Table from '@editorjs/table';
+// @ts-ignore
 import Underline from '@editorjs/underline';
+// @ts-ignore
 import Warning from '@editorjs/warning';
+// @ts-ignore
 import Paragraph from 'editorjs-paragraph-with-alignment';
+// @ts-ignore
 import Strikethrough from 'editorjs-strikethrough';
+// @ts-ignore
 import AlignmentTuneTool from 'editorjs-text-alignment-blocktune';
 import ImageWithoutUrlPaste from "../../Components/Common/Editor/ImageWithoutUrlPaste";
 
