@@ -28,7 +28,7 @@ const CoursesProvider: FC<DefaultProviderProps> = ({children}) => {
 
   const updateCourse = async (courseId: string | number | null, payload: UpdateCourse) => {
     const {json, error} = await patch(`/courses/${courseId}/`, payload, true);
-    console.log(json, error)
+    !error && store.dispatch({type: SET_COURSE, payload: json});
   }
 
   return (

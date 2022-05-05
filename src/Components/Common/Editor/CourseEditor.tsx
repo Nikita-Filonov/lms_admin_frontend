@@ -30,6 +30,7 @@ export const CourseEditor: FC<CourseEditorProps> = ({course}) => {
     setTimeout(async () => {
       const htmlContent = saveHtmlEditorContent();
       await updateCourse(course.id, {content: htmlContent, editorContent: content});
+      setLoading(false);
     }, 100);
   };
 

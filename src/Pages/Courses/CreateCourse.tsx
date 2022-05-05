@@ -6,6 +6,8 @@ import {useParams} from 'react-router-dom';
 import {useCourses} from "../../Providers/CoursesProvider";
 import {Course} from "../../Models/Courses";
 import {ReduxState} from "../../Models/ReduxState";
+import {CreateCourseToolbar} from "../../Components/Blocks/Courses/CreateCourseToolbar";
+import {HorizontalDivider} from "../../Components/Common/HorizontalDivider";
 
 type CreateCourseProps = {
   course: Course
@@ -25,6 +27,8 @@ const CreateCourse: FC<CreateCourseProps> = ({course}) => {
 
   return (
     <MainLayout>
+      <CreateCourseToolbar/>
+      <HorizontalDivider/>
       {course?.id && <CourseEditor course={course}/>}
       {/*{course?.id && <EditorRenderer data={JSON.parse(course.editorContent)}/>}*/}
     </MainLayout>
