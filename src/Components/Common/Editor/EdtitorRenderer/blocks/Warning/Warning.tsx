@@ -1,7 +1,5 @@
 import {FC} from 'react'
-import cn from 'classnames'
-import parse from 'html-react-parser'
-import styles from './Warning.module.scss'
+import {Alert, AlertTitle} from "@mui/material";
 
 type Content = {
   title: string
@@ -14,10 +12,11 @@ type WarningProps = {
 }
 
 export const Warning: FC<WarningProps> = ({data, className}) => {
+
   return (
-    <dl className={cn(styles.warning, className)}>
-      <dt className={styles.name}>{parse(data.title)}</dt>
-      <dd className={styles.message}>{parse(data.message)}</dd>
-    </dl>
+    <Alert severity="warning">
+      <AlertTitle>{data.title}</AlertTitle>
+      {data.message}
+    </Alert>
   )
 }
