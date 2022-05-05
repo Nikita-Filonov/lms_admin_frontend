@@ -1,0 +1,18 @@
+.codex-editor {
+  .math-inline-tool {
+    &__formula {
+      background: rgba(245,235,111,0.29);
+      padding: 6px;
+      cursor: pointer;
+      @include applyKatexStyles;
+      &_display-mode {
+        display: inline-block;
+      }
+    }
+    &__input {
+      width: 100%;
+    }
+  }
+}
+
+

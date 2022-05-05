@@ -1,0 +1,25 @@
+.editor {
+  :global {
+    .katex-display {
+      &.fleqn {
+        & >.katex {
+          padding-left: 0;
+        }
+      }
+      & >.katex {
+        &,
+        & > .katex-html {
+          display: inline-block;
+        }
+      }
+    }
+
+    .ce-Math {
+      &,
+      .katex-display,
+      > div {
+        display: inline-block;
+      }
+    }
+  }
+}
