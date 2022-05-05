@@ -10,7 +10,7 @@ export interface Course {
 export interface CreateCourse extends Omit<Course, 'editorContent' | 'content' | 'id'> {
 }
 
-export interface UpdateCourse extends Omit<Course, 'id'> {
+export interface UpdateCourse extends Partial<Omit<Course, 'id'>> {
 }
 
 export interface ReduxCourse extends Course {

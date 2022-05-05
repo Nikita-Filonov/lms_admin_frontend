@@ -4123,6 +4123,11 @@ duplexer@^0.1.2:
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
 
+editorjs-paragraph-with-alignment@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/editorjs-paragraph-with-alignment/-/editorjs-paragraph-with-alignment-3.0.0.tgz#831b34b59fcb432296af56bca0f5787131872d93"
+  integrity sha512-vSjjB/KUECEBxYqbj9yn1L799L14n0uoKrvk5qfaAokIHB8mYg5hZ8mOTtoS2cJu+xE3QZ/jmHY/Fh0EJeM8ZQ==
+
 editorjs-strikethrough@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/editorjs-strikethrough/-/editorjs-strikethrough-1.0.0.tgz#3687e8fb61d09ef87e76dc9f1f360b6f3db9ec4e"

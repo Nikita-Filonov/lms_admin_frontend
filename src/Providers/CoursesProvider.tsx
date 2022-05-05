@@ -26,7 +26,7 @@ const CoursesProvider: FC<DefaultProviderProps> = ({children}) => {
     !error && setCourses([...courses, json]);
   };
 
-  const updateCourse = async (courseId: number, payload: UpdateCourse) => {
+  const updateCourse = async (courseId: number | null, payload: UpdateCourse) => {
     const {json, error} = await patch(`/courses/${courseId}/`, payload, true);
     console.log(json, error)
   }

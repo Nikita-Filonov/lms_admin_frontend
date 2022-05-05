@@ -8,13 +8,13 @@ import {EDITOR_JS_TOOLS} from "../../../Utils/Constants/Editor";
 const ReactEditorJS = createReactEditorJS();
 
 type EditorProps = {
-  autofocus: boolean
+  autoFocus: boolean
   editorData: any
   resourceId?: string | null
   onChange: (data: OutputData) => void
 }
 
-export const Editor: FC<EditorProps> = ({autofocus, editorData, onChange}) => {
+export const Editor: FC<EditorProps> = ({autoFocus, editorData, onChange}) => {
   const editorCore: MutableRefObject<null | EditorCore> = useRef<EditorCore>(null)
 
   const handleInitialize = useCallback((instance: EditorCore) => {
@@ -48,7 +48,7 @@ export const Editor: FC<EditorProps> = ({autofocus, editorData, onChange}) => {
         tools={editorTools}
         inlineToolbar={true} // ['bold', 'italic', 'underline', 'strikethrough', 'link', 'marker', 'math']
         defaultValue={editorData}
-        autofocus={autofocus}
+        autofocus={autoFocus}
         onChange={handleSave}
       />
     </div>

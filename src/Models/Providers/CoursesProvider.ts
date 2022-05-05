@@ -5,5 +5,5 @@ export type CoursesContextType = {
   getCourse: (courseId: number) => void;
   getCourses: () => void;
   createCourse: (payload: CreateCourse) => void;
-  updateCourse: (courseId: number, payload: UpdateCourse) => void;
+  updateCourse: (courseId: number | null, payload: UpdateCourse) => void;
 };
