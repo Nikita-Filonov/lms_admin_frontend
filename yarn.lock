@@ -1253,6 +1253,11 @@
   resolved "https://registry.yarnpkg.com/@editorjs/table/-/table-2.0.2.tgz#eb4aa3a7428bb23c95fa6bb3251a4aaa44ab3fb9"
   integrity sha512-Ws5c9kmYsbWTBJ1WKSZRN+ATrqFFzjf/zggVu8AI/mVcNvSYUiEVqibLtbh5RLHiDGkELRZ9Bw5PQfVCg7yuBw==
 
+"@editorjs/underline@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@editorjs/underline/-/underline-1.0.0.tgz#47e5e5fde7a3dd071bc9f4faed90b4f518b7e3db"
+  integrity sha512-2qbmr6/Y5ZIsfmJeAxLujCndc5wpIEQ2uxoPIdR3uHIUQhA6Q28U5HdoGpEZwsP1d7e/A/vBhN18Ugro0iA0MQ==
+
 "@editorjs/warning@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@editorjs/warning/-/warning-1.2.0.tgz#245a2286a2e996512ac345275b64fa638e319f5e"
@@ -4117,6 +4122,16 @@ duplexer@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
+
+editorjs-strikethrough@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/editorjs-strikethrough/-/editorjs-strikethrough-1.0.0.tgz#3687e8fb61d09ef87e76dc9f1f360b6f3db9ec4e"
+  integrity sha512-jesqbAg/nehdhU2LWSH4nxzy276Zvym9T8RjPLpeCEqpJJDzrlmU4CAEGgQUQlbJlNuEtp+w8yloAOwaA5QoYg==
+
+editorjs-text-alignment-blocktune@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/editorjs-text-alignment-blocktune/-/editorjs-text-alignment-blocktune-1.0.3.tgz#7942fe2d3fbdbd7fcfd10fbb9b341c97ec3eb84f"
+  integrity sha512-DAJ2LJP+WjETvU4lVOJCqZ1kZkKHp0GkujkqZgza9DRv7bO46m1M/s2d5Ba5hPFdmqk1vA/ci++MQXgWD7mWYw==
 
 ee-first@1.1.1:
   version "1.1.1"

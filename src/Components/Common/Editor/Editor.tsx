@@ -1,9 +1,9 @@
-import {FC, MutableRefObject, useCallback, useRef} from 'react'
-import {createReactEditorJS} from 'react-editor-js'
-import {OutputData} from '@editorjs/editorjs/types/data-formats/output-data'
-import {EditorCore} from '@react-editor-js/client/dist/core/src/editor-core'
-import {EDITOR_JS_TOOLS} from './constants'
-import styles from './Editor.module.scss'
+import {FC, MutableRefObject, useCallback, useRef} from 'react';
+import {createReactEditorJS} from 'react-editor-js';
+import {OutputData} from '@editorjs/editorjs/types/data-formats/output-data';
+import {EditorCore} from '@react-editor-js/client/dist/core/src/editor-core';
+import styles from './Editor.module.scss';
+import {EDITOR_JS_TOOLS} from "../../../Utils/Constants/Editor";
 
 const ReactEditorJS = createReactEditorJS();
 
@@ -19,13 +19,13 @@ export const Editor: FC<EditorProps> = ({autofocus, editorData, onChange}) => {
 
   const handleInitialize = useCallback((instance: EditorCore) => {
     editorCore.current = instance
-  }, [])
+  }, []);
 
   const handleSave = useCallback(async () => {
     if (!editorCore?.current) return
     const savedData = await editorCore.current.save()
     onChange(savedData)
-  }, [onChange])
+  }, [onChange]);
 
   const imageOptions = {
     config: {
@@ -35,20 +35,18 @@ export const Editor: FC<EditorProps> = ({autofocus, editorData, onChange}) => {
         },
       },
     },
-  }
+  };
   const editorTools = {
     ...EDITOR_JS_TOOLS,
     image: {...EDITOR_JS_TOOLS.image, ...imageOptions},
-  }
-
-  const toolbar = true // ['bold', 'italic', 'underline', 'strikethrough', 'link', 'marker', 'math']
+  };
 
   return (
     <div className={styles.editor}>
       <ReactEditorJS
         onInitialize={handleInitialize}
         tools={editorTools}
-        inlineToolbar={toolbar}
+        inlineToolbar={true} // ['bold', 'italic', 'underline', 'strikethrough', 'link', 'marker', 'math']
         defaultValue={editorData}
         autofocus={autofocus}
         onChange={handleSave}

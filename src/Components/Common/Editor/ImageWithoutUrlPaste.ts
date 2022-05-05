@@ -1,4 +1,4 @@
-import Image from '@editorjs/image'
+import Image from '@editorjs/image';
 
 export default class ImageWithoutUrlPaste extends Image {
   static get pasteConfig() {
