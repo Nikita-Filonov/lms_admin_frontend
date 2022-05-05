@@ -1,14 +1,15 @@
 import {ReduxCourse} from "../../Models/Courses";
 
-type courseEditorStatus = {
+export interface CourseEditorProps {
   lastSaved: null | Date;
-  loading: boolean
+  loading: boolean;
+  isPreview: boolean;
 }
 
 type initialState = {
   course: ReduxCourse;
   createCourseModal: boolean;
-  courseEditorStatus: courseEditorStatus;
+  courseEditor: CourseEditorProps;
 }
 
 export const INITIAL_COURSES: initialState = {
@@ -21,9 +22,10 @@ export const INITIAL_COURSES: initialState = {
     editorContent: '',
     editMode: false,
   },
-  courseEditorStatus: {
+  courseEditor: {
     lastSaved: null,
-    loading: false
+    loading: false,
+    isPreview: false
   },
   createCourseModal: false
 };

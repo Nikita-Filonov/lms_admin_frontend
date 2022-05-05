@@ -1,5 +1,6 @@
 import {Theme} from "./Theme";
 import {Course} from "./Courses";
+import {CourseEditorProps} from "../Redux/Courses/initialState";
 
 interface UsersReduxState {
   theme: Theme;
@@ -9,6 +10,7 @@ interface UsersReduxState {
 interface CoursesReduxState {
   course: Course;
   createCourseModal: boolean;
+  courseEditor: CourseEditorProps
 }
 
 export interface ReduxState {
